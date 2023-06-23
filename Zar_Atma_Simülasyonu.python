@@ -1,0 +1,17 @@
+import random
+
+print("Merhaba Zar Atma Oyununa Hoşgeldiniz ☺")
+min = 1
+maks = 6
+while True:
+  deger= int(input("\nLütfen 1-6 aralığında değer giriniz (Çıkmak için 7'a basınız): "))
+  if deger==7:
+    break
+  elif 1<=deger<=6:
+    x = random.randint(min,maks)
+    if x == deger:
+      print("Kazandınız")
+    else:
+      print("Kazanamadınız. Tahmin değeri:", x)
+  else:
+    print("Eksik ya da hatalı tuşlama. Tekrar deneyin!")
