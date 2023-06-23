@@ -1,0 +1,29 @@
+import time
+print("HESAP MAKİNESİ")
+sayı1 = int(input("1.sayı: "))
+sayı2 = int(input("2.sayı: ")) #Float lı  hesaplamıyor
+
+a= "4 işlem operatöründen birini seçiniz: "
+islem = input(a)
+print("_"*50)
+print("Hesaplanıyor..")
+time.sleep(2)
+if islem == "+":
+  new = sayı1 +sayı2
+  print("sonuç: ",new)
+elif islem == "-":
+  new = sayı1 -sayı2
+  print("sonuç: ", new)
+  if sayı1 > sayı2:
+    print(sayı1,",",sayı2,"den büyüktür")
+elif islem == "*":
+  new = sayı1 * sayı2
+  print("sonuç: ",new)
+elif islem == "/":
+  if sayı2 == 0:
+    print("0'a bölünemez. Tekrar giriniz.")
+  elif sayı2!=0:
+    new = sayı1 / sayı2
+    print("sonuç: ",new)
+else :
+  print("Tekrar dene")
