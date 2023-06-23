@@ -1,0 +1,25 @@
+import random  #1 den 6 ya kadar rastgele bir sayı değeri yazdırmak için
+import os      #kullanıcının karşısına çıkacak ifadelerin üst üste binmemesi için yani daha temiz bir kod elde etmek için kullanacağız
+import time    #kullanıcı zarı atma işlemini onayladıktan sonra biraz bekletmek için kullanma
+print("Zar Atma Simülasyonu")
+print("_"*50)
+
+while True:
+  zarAt = input("Zarı atmayı onaylamak için herhangi bir şey yazın: ")
+  print("Zar Atılıyor..")
+  time.sleep(2)
+  print("\nZarın üstündeki rakam: {}".format(random.randint(1,6)))
+  print("_"*50)
+  soru = input("Zarı tekrar atmak ister misiniz?\nCevabınız evet ise'E' hayır ise'H'yazın: ")
+  if soru =="E" or soru =="e":
+    #bundan sonra temizleme olmuyor sanki
+    if os.name == 'nt':
+      os.system('cls')#windows da temizleme, terminalde temizliyor!!!
+      print("Aşağıdan zarı tekrar atabilirsiniz.")
+    else:
+      os.system('clear') #MacOS veya Linux da temizleme, terminalde temizliyor!!!
+      print("Aşağıdan zarı tekrar atabilirsiniz.")
+    print("_"*50)
+  else:
+    print("Programdan çıktınız.")
+    break
