@@ -12,7 +12,6 @@ while True:
   print("_"*50)
   soru = input("Zarı tekrar atmak ister misiniz?\nCevabınız evet ise'E' hayır ise'H'yazın: ")
   if soru =="E" or soru =="e":
-    #bundan sonra temizleme olmuyor sanki
     if os.name == 'nt':
       os.system('cls')#windows da temizleme, terminalde temizliyor!!!
       print("Aşağıdan zarı tekrar atabilirsiniz.")
